@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**
  * Created by julieschneider on 2/13/17.
  */
-public class CountriesApp extends CountriesTextFile{
+public class CountriesApp {
 
     public static int rules(){
 
@@ -18,6 +18,32 @@ public class CountriesApp extends CountriesTextFile{
 
         return input;
 
+    }
+
+    public static void userPickOne(int input){
+
+        if (input == 1){
+            System.out.println(CountriesTextFile.readTextFromFile("countries.txt"));
+        }
+
+    }
+
+    public static void userPickTwo(int input){
+
+        Scanner scan = new Scanner(System.in);
+        String country = " ";
+
+        if (input == 2){
+            System.out.println("Please enter a country: ");
+            country = scan.nextLine();
+            CountriesTextFile.writeTextToFile("countries.txt", country);
+            System.out.println("This country has been added!");
+            System.out.println();
+        }
+    }
+
+    public static void userPickThree(int input){
+        System.out.println("Bye!");
     }
 
 }
