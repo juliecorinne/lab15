@@ -11,9 +11,9 @@ public class CountriesApp {
         int input = 0;
 
         System.out.println("Here is the menu: ");
-        System.out.println("1. Display a list of countries.");
-        System.out.println("2. Enter a Country to add to the list.");
-        System.out.println("3. Quit.");
+        System.out.println("1) Display a list of countries.");
+        System.out.println("2) Enter a Country to add to the list.");
+        System.out.println("3) Quit.");
         input = Validation.rangeValidator(1,3);
 
         return input;
