@@ -16,6 +16,7 @@ public class Main {
         while (countryList) {
 
             input = CountriesApp.rules();
+            System.out.println();
 
             if (input == 1) {
                 System.out.println(CountriesTextFile.readTextFromFile("countries.txt"));
@@ -33,7 +34,8 @@ public class Main {
                 System.out.println("Please enter a country: ");
                 country = scan.nextLine();
                 CountriesTextFile.writeTextToFile("countries.txt", country);
-                System.out.println(CountriesTextFile.readTextFromFile("countries.txt"));
+                System.out.println("This country has been added!");
+                System.out.println();
 
                 System.out.println("Would you like to try another command? y/n");
                 userInput = scan.nextLine();
@@ -50,9 +52,6 @@ public class Main {
         }
 
         System.out.println("Bye!");
-
-
-
 
     }
 }

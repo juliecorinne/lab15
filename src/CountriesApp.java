@@ -14,11 +14,7 @@ public class CountriesApp extends CountriesTextFile{
         System.out.println("1. Display a list of countries.");
         System.out.println("2. Enter a Country to add to the list.");
         System.out.println("3. Quit.");
-        input = scan.nextInt();
-
-        if (input == 0){
-
-        }
+        input = Validation.rangeValidator(1,3);
 
         return input;
 
